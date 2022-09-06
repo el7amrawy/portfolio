@@ -135,12 +135,14 @@ nav .bars {
   }
 }
 /* ==================== Main ==================== */
-/* main {
-  background-color: #ec5b53;
-} */
+main {
+  /* background-color: #ec5b53; */
+  width: 90%;
+  margin: auto;
+}
 /* ==================== Summary ==================== */
 .summary {
-  width: 90%;
+  /* width: 90%; */
   height: 650px;
   margin: auto;
   display: flex;
@@ -175,3 +177,39 @@ nav .bars {
   }
 }
 /* ==================== Skills ==================== */
+.skills {
+  background-color: #ec5b53;
+  padding: 40px 50px;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 35px 20px;
+  border-radius: 4px;
+}
+.skills > * {
+  color: white;
+}
+.skills > h1 {
+  text-align: center;
+  grid-column: 1/3;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.skills .front,
+.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills > div > h2 {
+  margin-bottom: 25px;
+}
+.skills ul {
+  list-style: none;
+  color: #000;
+}
+.skills ul li {
+  margin: 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
