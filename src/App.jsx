@@ -3,6 +3,7 @@ import "./style.css";
 import NavBar from "./components/Navbar";
 import Summary from "./components/Summary";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 export default function App() {
   const [navShadow, setNavShadow] = useState(true);
@@ -13,6 +14,7 @@ export default function App() {
       <main>
         <Summary />
         <Skills />
+        <Projects />
       </main>
     </>
   );

@@ -167,6 +167,7 @@ main {
   font-size: 1.5rem;
   width: 500px;
   font-weight: 300;
+  color: #000a2d;
 }
 @media (max-width: 991px) {
   .summary {
@@ -179,6 +180,7 @@ main {
     width: unset;
   }
 }
+
 /* ==================== Skills ==================== */
 .skills {
   background-color: #ec5b53;
@@ -209,10 +211,51 @@ main {
 }
 .skills ul {
   list-style: none;
-  color: #000;
+  color: #000a2d;
 }
 .skills ul li {
   margin: 10px;
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+/* ==================== Projects ==================== */
+.projects {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: #000a2d;
+}
+.projects h2 {
+}
+.projects .nav {
+  position: relative;
+}
+.projects .nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #d5d9e0;
+  left: 0;
+  bottom: -0.5px;
+  /* z-index: -1; */
+}
+.projects .nav a {
+  display: inline-block;
+  position: relative;
+  color: #000a2d;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.1rem;
+  height: 100%;
+  z-index: 5;
+  margin-right: 0;
+  padding: 0 10px 10px;
+  border-bottom: 2px solid #ec5b5300;
+}
+.projects .nav a.active {
+  border-bottom: 2px solid #dc3545;
+  color: #ec5b53;
 }
