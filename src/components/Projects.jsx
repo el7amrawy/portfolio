@@ -2,6 +2,11 @@
 import Project from "./Project";
 /* images */
 import watchShop from "../assets/images/watch shop.png";
+import landingPage from "../assets/images/landing-page.png";
+import newsAPI from "../assets/images/news-api.png";
+import weather from "../assets/images/weather.png";
+import ts from "../assets/images/ts_logo.png";
+//
 import { useEffect, useState } from "react";
 
 export default function Projects() {
@@ -16,18 +21,19 @@ export default function Projects() {
     event.target.innerText == "Front-End" ? setFront(true) : setFront(false);
   }
 
-  useEffect(() => {
-    const elems = Array.from(
-      document.querySelectorAll(".front-projs ,.back-projs")
-    );
-    elems.map((elem) => {
-      // console.log(elems, elem);
-      if (elem.children.length < 3) {
-        console.log(0);
-        elem.style.justifyContent = "flex-start";
-      }
-    });
-  }, [front]);
+  // useEffect(() => {
+  //   const elems = Array.from(
+  //     document.querySelectorAll(".front-projs ,.back-projs")
+  //   );
+  //   elems.map((elem) => {
+  //     // console.log(elems, elem);
+  //     if (elem.children.length < 3) {
+  //       elem.style.justifyContent = "flex-start";
+  //     } else {
+  //       elem.style.justifyContent = "space-between";
+  //     }
+  //   });
+  // }, [front]);
 
   return (
     <section className="projects">
@@ -48,37 +54,32 @@ export default function Projects() {
             url="https://el7amrawy.github.io/timezone-temp/"
           />
           <Project
-            name="Watch Shop Template"
-            img={watchShop}
-            url="https://el7amrawy.github.io/timezone-temp/"
+            name="Landing Page"
+            img={landingPage}
+            url="https://el7amrawy.github.io/Landing-Page/"
           />
           <Project
-            name="Watch Shop Template"
-            img={watchShop}
-            url="https://el7amrawy.github.io/timezone-temp/"
+            name="News App"
+            img={newsAPI}
+            url="https://github.com/el7amrawy/news-api"
           />
           <Project
-            name="Watch Shop Template"
-            img={watchShop}
-            url="https://el7amrawy.github.io/timezone-temp/"
-          />
-          <Project
-            name="Watch Shop Template"
-            img={watchShop}
-            url="https://el7amrawy.github.io/timezone-temp/"
+            name="Weather-Journal App"
+            img={weather}
+            url="https://github.com/el7amrawy/Weather-Journal-App"
           />
         </div>
       ) : (
         <div className="back-projs">
           <Project
-            name="Watch Shop Template"
-            img={watchShop}
-            url="https://el7amrawy.github.io/timezone-temp/"
+            name="Storefront Backend"
+            img={ts}
+            url="https://github.com/el7amrawy/storefront-backend"
           />
           <Project
-            name="Watch Shop Template"
-            img={watchShop}
-            url="https://el7amrawy.github.io/timezone-temp/"
+            name="Image Processing API"
+            img={ts}
+            url="https://github.com/el7amrawy/image-processing-api"
           />
         </div>
       )}
