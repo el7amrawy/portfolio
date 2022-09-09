@@ -221,7 +221,10 @@ main {
 
 /* ==================== Projects ==================== */
 .projects {
+  margin: 60px 0;
   padding: 20px;
+}
+.projects .header {
   display: flex;
   justify-content: space-around;
   color: #000a2d;
@@ -258,4 +261,47 @@ main {
 .projects .nav a.active {
   border-bottom: 2px solid #dc3545;
   color: #ec5b53;
+}
+
+/* ==================== Projects ==================== */
+.front-projs,
+.back-projs {
+  margin: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project {
+  width: max-content;
+  /* display: flex; */
+  background-color: #dd4038;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 4px #b2b2b2;
+  margin: 0 20px 50px;
+}
+.project img {
+  width: 240px;
+  /* height: 100%; */
+}
+.project .info {
+  text-align: center;
+  /* padding: 10px; */
+}
+.project .info h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 15px 0;
+  color: white;
+}
+.project .info button {
+  margin-bottom: 13px;
+  padding: 7px;
+  border-radius: 4px;
+  border: none;
+}
+.project .info button a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: black;
 }
