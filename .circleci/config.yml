@@ -34,7 +34,7 @@ jobs:
           name: Configure git
           # TODO: Install, build, deploy in both apps
           command: |
-            npm install git config --global user.name "Aly" && git config --global user.email "el7amrawy@outlook.com"
+            git config --global user.name "Aly" && git config --global user.email "el7amrawy@outlook.com"
       - run:
           name: Deploy
           # TODO: Install, build, deploy in both apps
