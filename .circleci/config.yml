@@ -40,13 +40,6 @@ workflows:
   install and deploy:
     jobs:
       - install
-      - hold:
-          filters:
-            branches:
-              only:
-                - master
-          requires:
-            - install
       - deploy:
           requires:
             - hold
