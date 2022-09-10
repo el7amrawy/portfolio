@@ -34,7 +34,7 @@ jobs:
           name: Deploy
           # TODO: Install, build, deploy in both apps
           command: |
-            npm run deploy
+            npm install && npm run deploy
 
 workflows:
   install and deploy:
