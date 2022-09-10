@@ -74,7 +74,7 @@ body {
   background: #dd4038;
   position: fixed;
   bottom: 40px;
-  right: 40px;
+  right: 25px;
   color: white;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -339,7 +339,7 @@ main {
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0px 0px 10px 4px #b2b2b2;
-  margin: 0 27.5px 60px 27.5px;
+  margin: 0 27.5px 70px 27.5px;
   transition: all 0.2s ease-in-out;
 }
 .project:hover {
@@ -383,7 +383,7 @@ main {
     margin: 60px 0;
   }
   .project {
-    margin: 0 0 60px;
+    margin: 0 0 70px;
     width: inherit;
   }
 }
