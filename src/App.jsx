@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./style.css";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/Nav";
 import Summary from "./components/Summary";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
