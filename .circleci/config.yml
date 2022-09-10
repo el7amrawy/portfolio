@@ -3,21 +3,6 @@ orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: circleci/node@5.0.2
 jobs:
-  build:
-    docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:16.16"
-    steps:
-      # install node and checkout code
-      - node/install:
-          node-version: "16.16"
-      - checkout
-      # Use root level package.json to install dependencies in the frontend app
-      - run:
-          name: Install
-          command: |
-            npm i
-
   deploy:
     docker:
       - image: "cimg/base:stable"
@@ -26,6 +11,11 @@ jobs:
       - node/install:
           node-version: "16.16"
       - checkout
+      - run:
+          name: Install packages
+          # TODO: Install, build, deploy in both apps
+          command: |
+            npm install
       - run:
           name: Deploy
           # TODO: Install, build, deploy in both apps
@@ -40,7 +30,6 @@ jobs:
       #     command: |
       #       cd udagram/udagram-api && eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB AWS_BUCKET=$AWS_BUCKET JWT_SECRET=$JWT_SECRET
 workflows:
-  build_and_deploy:
+  deploy:
     jobs:
-      - build
       - deploy
