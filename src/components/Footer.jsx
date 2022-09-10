@@ -16,7 +16,7 @@ export default function Footer() {
         <a href="https://github.com/el7amrawy" target="_blank">
           <FontAwesomeIcon icon={faGithub} className="i" />
         </a>
-        <a href="mailto:alihamdihamdi.27@gmail.com">
+        <a href="mailto:alihamdihamdi.27@gmail.com" target="_blank">
           <FontAwesomeIcon icon={faEnvelope} className="i" />
         </a>
       </div>

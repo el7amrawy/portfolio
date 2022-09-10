@@ -29,7 +29,6 @@ jobs:
     steps:
       - node/install:
           node-version: "16.16"
-      - checkout
       - run:
           name: Configure git
           # TODO: Install, build, deploy in both apps
