@@ -318,7 +318,6 @@ main {
 @media (max-width: 991px) {
   .projects h2 {
     font-size: 1.3rem;
-    margin-right: 3px;
   }
   .projects .nav a {
     font-size: 1rem;
