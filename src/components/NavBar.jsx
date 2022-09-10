@@ -69,7 +69,7 @@ export default function NavBar() {
           icon={bars ? faBarsStaggered : faBars}
           className="bars"
           onClick={toggleBars}
-          style={bars && { color: "#ec5b53" }}
+          style={bars ? { color: "#000" } : { color: "#ec5b53" }}
         />
       </nav>
     </header>

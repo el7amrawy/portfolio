@@ -5,6 +5,7 @@ import Summary from "./components/Summary";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 
 export default function App() {
@@ -17,8 +18,8 @@ export default function App() {
         const navItem = document.querySelector(`[href="#${sec.id}"]`);
         if (
           navItem.innerText == "Projects" &&
-          sec.getBoundingClientRect().top < 505 &&
-          sec.getBoundingClientRect().top > -2100
+          sec.getBoundingClientRect().top < 0 &&
+          sec.getBoundingClientRect().top > sec.clientHeight * -0.8
         ) {
           navItem.classList.add("active");
         } else if (
@@ -30,9 +31,9 @@ export default function App() {
           navItem.classList.remove("active");
         }
       });
-      console.log(
-        document.getElementById("contact").getBoundingClientRect().top
-      );
+      // console.log(
+      //   document.getElementById("contact").getBoundingClientRect().top
+      // );
       if (document.documentElement.scrollTop >= 650) {
         setScrollTop(true);
       } else {
@@ -50,6 +51,7 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
+      <Footer />
       {scrollTop && <ScrollTop />}
     </>
   );

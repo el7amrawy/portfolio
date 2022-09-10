@@ -179,6 +179,9 @@ nav .bars {
   nav ul li a:hover {
     color: #000;
   }
+  nav ul li a.active {
+    color: #000;
+  }
   nav button {
     display: none;
   }
@@ -402,4 +405,33 @@ main {
 .contact > a {
   display: inline-block;
   margin: 20px;
+}
+
+/* ==================== Footer ==================== */
+footer {
+  background-color: #080827;
+  width: 100%;
+  padding: 30px 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div:nth-child(1) {
+  color: #76778b;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+footer div:nth-child(1) span {
+  color: #ec5b53;
+  font-size: 1rem;
+}
+footer div:nth-child(2) .i {
+  color: #848493;
+  margin: 10px;
+  font-size: 1.5rem;
+  transition: 0.1s all ease-in-out;
+}
+footer div:nth-child(2) .i:hover {
+  color: white;
 }
