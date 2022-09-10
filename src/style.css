@@ -279,6 +279,7 @@ main {
   display: flex;
   justify-content: space-around;
   color: #000a2d;
+  align-items: flex-start;
 }
 /* .projects h2 {
 } */
@@ -317,6 +318,7 @@ main {
 @media (max-width: 991px) {
   .projects h2 {
     font-size: 1.3rem;
+    margin-right: 12px;
   }
   .projects .nav a {
     font-size: 1rem;
