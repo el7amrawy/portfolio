@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "homepage": "https://el7amrawy.github.io/",
+  "engines": {
+    "node": "16.16.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
