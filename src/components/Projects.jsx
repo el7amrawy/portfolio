@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Project from "./Project";
 /* images */
 import watchShop from "../assets/images/watch shop.png";
@@ -7,7 +7,6 @@ import newsAPI from "../assets/images/news-api.png";
 import weather from "../assets/images/weather.png";
 import ts from "../assets/images/ts_logo.png";
 //
-import { useEffect, useState } from "react";
 
 export default function Projects() {
   const [front, setFront] = useState(true);
@@ -21,22 +20,8 @@ export default function Projects() {
     event.target.innerText == "Front-End" ? setFront(true) : setFront(false);
   }
 
-  // useEffect(() => {
-  //   const elems = Array.from(
-  //     document.querySelectorAll(".front-projs ,.back-projs")
-  //   );
-  //   elems.map((elem) => {
-  //     // console.log(elems, elem);
-  //     if (elem.children.length < 3) {
-  //       elem.style.justifyContent = "flex-start";
-  //     } else {
-  //       elem.style.justifyContent = "space-between";
-  //     }
-  //   });
-  // }, [front]);
-
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="header">
         <h2>Projects</h2>
         <div className="nav">
@@ -73,11 +58,13 @@ export default function Projects() {
         <div className="back-projs">
           <Project
             name="Storefront Backend"
+            des="Shopping Application"
             img={ts}
             url="https://github.com/el7amrawy/storefront-backend"
           />
           <Project
             name="Image Processing API"
+            des="Image processing API that resizes images"
             img={ts}
             url="https://github.com/el7amrawy/image-processing-api"
           />

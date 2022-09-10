@@ -1,22 +1,37 @@
 import logo from "../assets/images/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function NavBar(props) {
-  const [bars, setBars] = useState(0);
+export default function NavBar() {
+  const [bars, setBars] = useState(false);
   function toggleBars() {
     setBars((prev) => !prev);
   }
+
+  useEffect(() => {
+    const elems = Array.from(document.querySelectorAll("nav ul li a"));
+    elems.map((elem) => {
+      elem.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        const target = elem.getAttribute("href").slice(1);
+        target == "projects"
+          ? document.getElementById(target).scrollIntoView({
+              block: "start",
+            })
+          : document.getElementById(target).scrollIntoView({
+              block: "center",
+            });
+      });
+    });
+  }, []);
+
   return (
     <header>
-      <nav
-        className={props.shadow && "shadow"}
-        style={bars ? { boxShadow: "unset" } : {}}
-      >
+      <nav className="shadow" style={bars ? { boxShadow: "unset" } : {}}>
         <div className="logo-cont">
           <img src={logo} alt="logo" />
-          <section>Aly Hamdy</section>
+          <span>Aly Hamdy</span>
         </div>
         <ul
           style={
@@ -30,19 +45,26 @@ export default function NavBar(props) {
           }
         >
           <li>
-            <a href="">Summary</a>
+            <a href="#summary" className="active">
+              Summary
+            </a>
           </li>
           <li>
-            <a href="">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="">Education</a>
+            <a href="#contact">Contact Me</a>
           </li>
         </ul>
-        <button className="btn">Download Resume</button>
+        <a
+          href="https://drive.google.com/file/d/1HGW217_9S90wU2qY392GWho7TnOLG8jd/view?usp=sharing"
+          target="_blank"
+        >
+          <button className="btn">Download Resume</button>
+        </a>
         <FontAwesomeIcon
           icon={bars ? faBarsStaggered : faBars}
           className="bars"
