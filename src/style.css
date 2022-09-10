@@ -160,7 +160,6 @@ nav .bars {
     width: 60%;
     right: 20%;
     top: -139px;
-    text-align: center;
     padding: 35px;
     border-radius: 0 0 6px 6px;
     visibility: hidden;
@@ -313,6 +312,15 @@ main {
 .projects .nav a.active {
   border-bottom: 2px solid #dc3545;
   color: #ec5b53;
+}
+
+@media (max-width: 991px) {
+  .projects h2 {
+    font-size: 1.3rem;
+  }
+  .projects .nav a {
+    font-size: 1rem;
+  }
 }
 
 /* ==================== Project ==================== */
