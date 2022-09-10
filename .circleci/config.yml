@@ -42,4 +42,4 @@ workflows:
       - install
       - deploy:
           requires:
-            - hold
+            - install
