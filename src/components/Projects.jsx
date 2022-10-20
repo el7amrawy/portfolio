@@ -12,7 +12,7 @@ import tenzies from "../assets/images/tenzies.png";
 //
 
 export default function Projects() {
-  const [front, setFront] = useState(true);
+  const [tab, setTab] = useState("full");
 
   function activeEle(event) {
     const elems = Array.from(document.querySelectorAll(".projects .nav a"));
@@ -20,7 +20,11 @@ export default function Projects() {
       elem.classList.remove("active");
     });
     event.target.classList.add("active");
-    event.target.innerText == "Front-End" ? setFront(true) : setFront(false);
+    event.target.innerText == "Front-End"
+      ? setTab("front")
+      : event.target.innerText == "Back-End"
+      ? setTab("back")
+      : setTab("full");
   }
 
   return (
@@ -28,13 +32,14 @@ export default function Projects() {
       <div className="header">
         <h2>Projects</h2>
         <div className="nav">
+          <a onClick={activeEle}>Full-Stack</a>
           <a className="active" onClick={activeEle}>
             Front-End
           </a>
           <a onClick={activeEle}>Back-End</a>
         </div>
       </div>
-      {front ? (
+      {tab === "front" && (
         <div className="front-projs">
           <Project
             name="Watch Shop Template"
@@ -72,7 +77,8 @@ export default function Projects() {
             url="https://el7amrawy.github.io/Landing-Page/"
           />
         </div>
-      ) : (
+      )}
+      {tab === "back" && (
         <div className="back-projs">
           <Project
             name="Storefront Backend"
@@ -85,6 +91,21 @@ export default function Projects() {
             des="Image processing API that resizes images"
             img={ts}
             url="https://github.com/el7amrawy/image-processing-api"
+          />
+        </div>
+      )}
+      {tab === "full" && (
+        <div className="full-projs">
+          <Project
+            name="CatWiki"
+            img="https://i.postimg.cc/X7j8k6BR/screencapture-127-0-0-1-5173-2022-10-06-17-28-54.jpg"
+            url="https://github.com/el7amrawy/catwiki"
+          />
+          <Project
+            name="Image Uploader"
+            des="Web app that uploads and serves images"
+            img="https://i.ibb.co/zbpThGc/uploadimages-1.png"
+            url="https://github.com/el7amrawy/image-uploader"
           />
         </div>
       )}

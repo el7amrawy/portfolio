@@ -19,7 +19,7 @@ export default function App() {
         if (
           navItem.innerText == "Projects" &&
           sec.getBoundingClientRect().top < 0 &&
-          sec.getBoundingClientRect().top > sec.clientHeight * -0.9
+          sec.getBoundingClientRect().top > sec.clientHeight * -0.8
         ) {
           navItem.classList.add("active");
         } else if (

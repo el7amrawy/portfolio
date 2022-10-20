@@ -60,7 +60,7 @@ export default function NavBar() {
           </li>
         </ul>
         <a
-          href="https://drive.google.com/file/d/1HGW217_9S90wU2qY392GWho7TnOLG8jd/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ue7y0vAB3Bls6T6-zAKKYeAnDqKx0Ifb/view?usp=sharing"
           target="_blank"
         >
           <button className="btn">Download Resume</button>

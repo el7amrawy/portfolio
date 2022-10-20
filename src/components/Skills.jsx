@@ -10,6 +10,7 @@ export default function Skills() {
           <li>JS</li>
           <li>jQuery</li>
           <li>React</li>
+          <li>Tailwind CSS</li>
         </ul>
       </div>
       <div className="back">
