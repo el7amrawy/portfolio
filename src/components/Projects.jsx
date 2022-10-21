@@ -32,10 +32,10 @@ export default function Projects() {
       <div className="header">
         <h2>Projects</h2>
         <div className="nav">
-          <a onClick={activeEle}>Full-Stack</a>
           <a className="active" onClick={activeEle}>
-            Front-End
+            Full-Stack
           </a>
+          <a onClick={activeEle}>Front-End</a>
           <a onClick={activeEle}>Back-End</a>
         </div>
       </div>
