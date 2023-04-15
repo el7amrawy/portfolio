@@ -18,7 +18,7 @@ export default function Contact() {
         </a>
       </div>
       <a
-        href="https://drive.google.com/file/d/1ue7y0vAB3Bls6T6-zAKKYeAnDqKx0Ifb/view?usp=sharing"
+        href="https://flowcv.com/resume/wvu54ad1k4"
         target="_blank"
       >
         <button className="btn">Download Resume</button>
